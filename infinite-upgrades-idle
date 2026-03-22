@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Upgrades Idle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Game Area -->
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <h1>∞ Infinite Upgrades Idle</h1>
+                <div class="stats">
+                    <div class="stat">
+                        <span class="stat-label">Resources:</span>
+                        <span id="resource-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Per Second:</span>
+                        <span id="per-second" class="stat-value">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Level:</span>
+                        <span id="level" class="stat-value">1</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Click Area -->
+            <div class="click-area">
+                <button id="click-button" class="click-button">
+                    CLICK ME!
+                </button>
+                <p class="click-info" id="click-info">+1 per click</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="tab-button active" data-tab="upgrades">Upgrades</button>
+                <button class="tab-button" data-tab="generators">Generators</button>
+                <button class="tab-button" data-tab="stats">Statistics</button>
+            </div>
+
+            <!-- Upgrades Tab -->
+            <div id="upgrades" class="tab-content active">
+                <div class="section-header">
+                    <h2>Available Upgrades</h2>
+                    <button id="generate-upgrades-btn" class="btn-secondary">Generate More</button>
+                </div>
+                <div id="upgrades-container" class="upgrades-container">
+                    <!-- Upgrades will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Generators Tab -->
+            <div id="generators" class="tab-content">
+                <div class="section-header">
+                    <h2>Active Generators</h2>
+                </div>
+                <div id="generators-container" class="generators-container">
+                    <!-- Generators will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Statistics Tab -->
+            <div id="stats" class="tab-content">
+                <div class="section-header">
+                    <h2>Game Statistics</h2>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-label">Total Clicks:</span>
+                        <span id="total-clicks" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Total Generated:</span>
+                        <span id="total-generated" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Upgrades Purchased:</span>
+                        <span id="upgrades-purchased" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Play Time:</span>
+                        <span id="play-time" class="stat-value">0s</span>
+                    </div>
+                </div>
+                <button id="save-btn" class="btn-secondary">Save Game</button>
+                <button id="reset-btn" class="btn-secondary btn-danger">Reset Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loading-indicator" class="loading-indicator hidden">
+        <div class="spinner"></div>
+        <p>Generating upgrades with AI...</p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
